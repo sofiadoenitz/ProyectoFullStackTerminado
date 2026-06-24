@@ -2,6 +2,7 @@ package com.example.ms_juego;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.test.context.ActiveProfiles;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.*;
+
 import com.example.ms_juego.Client.CatalogoFeignClient;
 import com.example.ms_juego.Client.DescuentoFeignClient;
 import com.example.ms_juego.Client.ModFeignClient;
@@ -27,11 +29,11 @@ public class JuegoServiceTest {
     @MockBean   
     private JuegoRepository juegoRepository;
     @MockBean
-    private CatalogoFeignClient catalogoFeignClient;
+    private CatalogoFeignClient catalogoClient;
     @MockBean
-    private ModFeignClient modFeignClient;
+    private ModFeignClient modClient;
     @MockBean
-    private DescuentoFeignClient descuentoFeignClient;
+    private DescuentoFeignClient descuentoClient;
 
     @Test
     public void testListarJuegos() {
@@ -92,32 +94,46 @@ public class JuegoServiceTest {
     public void testObtenerJuegoCompleto() {
         Long id = 1L;
 
-        Juego juego = new Juego();
-        juego.setIdCatalogo(2L);
-        juego.setIdDescuento(3L);
-        juego.setIdMod(4L);
+    Juego juego = new Juego();
+    juego.setId(id);
+    juego.setIdCatalogo(2L);
+    juego.setIdDescuento(3L);
+    juego.setIdMod(4L);
 
-        CatalogoDTO catalogo = new CatalogoDTO();
-        catalogo.setId(2L);
+    CatalogoDTO catalogo = new CatalogoDTO();
+    catalogo.setId(2L);
 
-        DescuentoDTO descuento = new DescuentoDTO();
-        descuento.setId(3L);
+    DescuentoDTO descuento = new DescuentoDTO();
+    descuento.setId(3L);
 
-        ModDTO mod = new ModDTO();
-        mod.setId(4L);
+    ModDTO mod = new ModDTO();
+    mod.setId(4L);
 
-        when(juegoRepository.findById(id)).thenReturn(java.util.Optional.of(juego));
-        when(catalogoFeignClient.obtenerCatalogo(2L)).thenReturn(catalogo);
-        when(descuentoFeignClient.obtenerDescuento(3L)).thenReturn(descuento);
-        when(modFeignClient.obtenerMod(4L)).thenReturn(mod);
+    when(juegoRepository.findById(id))
+            .thenReturn(Optional.of(juego));
 
-        Map<String, Object> resultado = juegoService.obtenerJuegoCompleto(id);
-        assertNotNull(resultado);
-        assertEquals(juego, resultado.get("juego"));
-        assertEquals(catalogo, resultado.get("catalogo"));
-        assertEquals(descuento, resultado.get("descuento"));
-        assertEquals(mod, resultado.get("mod"));
-    }
+    when(catalogoClient.obtenerCatalogo(2L))
+            .thenReturn(catalogo);
+
+    when(descuentoClient.obtenerDescuento(3L))
+            .thenReturn(descuento);
+
+    when(modClient.obtenerMod(4L))
+            .thenReturn(mod);
+
+    Map<String, Object> resultado = juegoService.obtenerJuegoCompleto(id);
+
+    assertNotNull(resultado);
+    assertEquals(juego, resultado.get("juego"));
+    assertEquals(catalogo, resultado.get("catalogo"));
+    assertEquals(descuento, resultado.get("descuento"));
+    assertEquals(mod, resultado.get("mod"));
+
+    verify(juegoRepository, times(1)).findById(id);
+    verify(catalogoClient, times(1)).obtenerCatalogo(2L);
+    verify(descuentoClient, times(1)).obtenerDescuento(3L);
+    verify(modClient, times(1)).obtenerMod(4L);
+}
 
 
 }

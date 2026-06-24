@@ -17,14 +17,9 @@ public class CatalogoService {
         return repo.findAll();
     }
 
-    public Catalogo buscarId(Long id){
-        List<Catalogo> lista= repo.findAll();
-        for(Catalogo catalogo : lista){
-            if(catalogo.getId().equals(id)){
-                return catalogo;
-            }
-        }
-        return null;
+    public Catalogo buscarId(Long id){  
+        return repo.findById(id).orElse(null);
+
     }
 
     public Catalogo guardar (Catalogo catalogo){

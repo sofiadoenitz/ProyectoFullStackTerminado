@@ -1,59 +1,56 @@
-2026-06-24T19:13:17.473-04:00  INFO 7264 --- [ms-juego] [main] com.example.ms_juego.JuegoServiceTest    : Starting JuegoServiceTest using Java 21.0.10 with PID 7264 (started by sofia in C:\Users\sofia\Downloads\ProyectoFullstackEpico\MicroServicios-main\ms-juego)
-2026-06-24T19:13:17.497-04:00  INFO 7264 --- [ms-juego] [main] com.example.ms_juego.JuegoServiceTest    : The following 1 profile is active: "test"
-2026-06-24T19:13:19.241-04:00  INFO 7264 --- [ms-juego] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-24T19:13:19.396-04:00  INFO 7264 --- [ms-juego] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 148 ms. Found 1 JPA repository interface.
-2026-06-24T19:13:19.837-04:00  INFO 7264 --- [ms-juego] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=79b4ed36-0d56-3dc9-bfe6-d1a757d1efe3
-2026-06-24T19:13:22.552-04:00  WARN 7264 --- [ms-juego] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-06-24T19:13:22.568-04:00  WARN 7264 --- [ms-juego] [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-06-24T19:13:23.342-04:00  INFO 7264 --- [ms-juego] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-24T19:13:24.497-04:00  INFO 7264 --- [ms-juego] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ac25dbb
-2026-06-24T19:13:24.502-04:00  INFO 7264 --- [ms-juego] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-24T19:13:24.751-04:00  INFO 7264 --- [ms-juego] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
-2026-06-24T19:13:24.755-04:00  INFO 7264 --- [ms-juego] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
-2026-06-24T19:13:24.757-04:00  INFO 7264 --- [ms-juego] [main] o.f.c.internal.license.VersionPrinter    : 
-2026-06-24T19:13:24.822-04:00  INFO 7264 --- [ms-juego] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_juego-test (MySQL 8.0)
-2026-06-24T19:13:24.987-04:00  INFO 7264 --- [ms-juego] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.123s)
-2026-06-24T19:13:25.007-04:00  INFO 7264 --- [ms-juego] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_juego-test`: 1
-2026-06-24T19:13:25.011-04:00  INFO 7264 --- [ms-juego] [main] o.f.core.internal.command.DbMigrate      : Schema `db_juego-test` is up to date. No migration necessary.
-2026-06-24T19:13:25.203-04:00  INFO 7264 --- [ms-juego] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-24T19:13:25.342-04:00  INFO 7264 --- [ms-juego] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-06-24T19:13:25.436-04:00  INFO 7264 --- [ms-juego] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-24T19:13:25.650-04:00  INFO 7264 --- [ms-juego] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-24T19:13:25.797-04:00  WARN 7264 --- [ms-juego] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-06-24T19:13:27.490-04:00  INFO 7264 --- [ms-juego] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-24T19:13:27.529-04:00 DEBUG 7264 --- [ms-juego] [main] org.hibernate.SQL                        : 
-    drop table if exists juego
-2026-06-24T19:13:27.570-04:00 DEBUG 7264 --- [ms-juego] [main] org.hibernate.SQL                        : 
-    create table juego (
-        disponible bit not null,
+2026-06-24T19:10:01.896-04:00  INFO 17608 --- [ms-biblioteca] [main] c.e.ms_biblioteca.BibliotecaServiceTest  : Starting BibliotecaServiceTest using Java 21.0.10 with PID 17608 (started by sofia in C:\Users\sofia\Downloads\ProyectoFullstackEpico\MicroServicios-main\ms-biblioteca)
+2026-06-24T19:10:01.900-04:00  INFO 17608 --- [ms-biblioteca] [main] c.e.ms_biblioteca.BibliotecaServiceTest  : The following 1 profile is active: "test"
+2026-06-24T19:10:03.879-04:00  INFO 17608 --- [ms-biblioteca] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-24T19:10:04.104-04:00  INFO 17608 --- [ms-biblioteca] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 205 ms. Found 1 JPA repository interface.
+2026-06-24T19:10:04.870-04:00  INFO 17608 --- [ms-biblioteca] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=58ca6a7d-62d2-3ad9-baa2-cd56f35ab50b
+2026-06-24T19:10:12.757-04:00  WARN 17608 --- [ms-biblioteca] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-06-24T19:10:12.768-04:00  WARN 17608 --- [ms-biblioteca] [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-24T19:10:15.201-04:00  INFO 17608 --- [ms-biblioteca] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-24T19:10:17.886-04:00  INFO 17608 --- [ms-biblioteca] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30c03473
+2026-06-24T19:10:17.900-04:00  INFO 17608 --- [ms-biblioteca] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-24T19:10:18.482-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2026-06-24T19:10:18.484-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2026-06-24T19:10:18.485-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.c.internal.license.VersionPrinter    : 
+2026-06-24T19:10:18.591-04:00  INFO 17608 --- [ms-biblioteca] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_biblioteca-test (MySQL 8.0)
+2026-06-24T19:10:18.773-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `db_biblioteca-test`.`flyway_schema_history` does not exist yet
+2026-06-24T19:10:18.788-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.119s)
+2026-06-24T19:10:18.862-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `db_biblioteca-test`.`flyway_schema_history` ...
+2026-06-24T19:10:19.024-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_biblioteca-test`: << Empty Schema >>
+2026-06-24T19:10:19.048-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `db_biblioteca-test` to version "1 - biblioteca"
+2026-06-24T19:10:19.165-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema `db_biblioteca-test`, now at version v1 (execution time 00:00.047s)
+2026-06-24T19:10:19.654-04:00  INFO 17608 --- [ms-biblioteca] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-24T19:10:19.978-04:00  INFO 17608 --- [ms-biblioteca] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-24T19:10:20.131-04:00  INFO 17608 --- [ms-biblioteca] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-24T19:10:20.597-04:00  INFO 17608 --- [ms-biblioteca] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-24T19:10:20.825-04:00  WARN 17608 --- [ms-biblioteca] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-24T19:10:23.017-04:00  INFO 17608 --- [ms-biblioteca] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-24T19:10:23.057-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : 
+    drop table if exists biblioteca
+2026-06-24T19:10:23.086-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : 
+    create table biblioteca (
+        horas_jugadas integer not null,
+        instalado bit not null,
         id bigint not null auto_increment,
-        id_catalogo bigint,
-        id_descuento bigint,
-        id_mod bigint,
-        categoria varchar(255),
-        desarrolladora varchar(255),
-        descripcion varchar(255),
-        fecha_lanzamiento varchar(255),
-        nombre varchar(255),
+        juego_id bigint,
         primary key (id)
     ) engine=InnoDB
-2026-06-24T19:13:27.606-04:00  INFO 7264 --- [ms-juego] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-24T19:13:28.197-04:00  WARN 7264 --- [ms-juego] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-24T19:13:30.867-04:00  INFO 7264 --- [ms-juego] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-06-24T19:13:31.941-04:00  INFO 7264 --- [ms-juego] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-06-24T19:13:31.986-04:00  INFO 7264 --- [ms-juego] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-06-24T19:13:32.122-04:00  WARN 7264 --- [ms-juego] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-06-24T19:13:32.202-04:00  INFO 7264 --- [ms-juego] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-06-24T19:13:32.431-04:00  INFO 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-06-24T19:13:32.439-04:00  INFO 7264 --- [ms-juego] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-06-24T19:13:32.492-04:00  INFO 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-06-24T19:13:32.494-04:00  INFO 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-06-24T19:13:32.495-04:00  INFO 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-06-24T19:13:32.496-04:00  INFO 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-06-24T19:13:32.498-04:00  INFO 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-06-24T19:13:32.500-04:00  INFO 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-06-24T19:13:32.500-04:00  INFO 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-06-24T19:13:33.037-04:00  INFO 7264 --- [ms-juego] [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2026-06-24T19:10:23.131-04:00  INFO 17608 --- [ms-biblioteca] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24T19:10:24.215-04:00  WARN 17608 --- [ms-biblioteca] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-24T19:10:27.923-04:00  INFO 17608 --- [ms-biblioteca] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-24T19:10:29.020-04:00  INFO 17608 --- [ms-biblioteca] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-24T19:10:29.078-04:00  INFO 17608 --- [ms-biblioteca] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-06-24T19:10:29.190-04:00  WARN 17608 --- [ms-biblioteca] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-24T19:10:29.305-04:00  INFO 17608 --- [ms-biblioteca] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-24T19:10:29.557-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-24T19:10:29.576-04:00  INFO 17608 --- [ms-biblioteca] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-24T19:10:29.644-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-24T19:10:29.644-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-24T19:10:29.644-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-24T19:10:29.644-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-24T19:10:29.644-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-24T19:10:29.644-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-24T19:10:29.644-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-24T19:10:30.196-04:00  INFO 17608 --- [ms-biblioteca] [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
@@ -237,8 +234,8 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
 	... 140 more
 
-2026-06-24T19:13:33.038-04:00  WARN 7264 --- [ms-juego] [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2026-06-24T19:13:33.039-04:00  INFO 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2026-06-24T19:10:30.197-04:00  WARN 17608 --- [ms-biblioteca] [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2026-06-24T19:10:30.198-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-BIBLIOTECA/localhost:ms-biblioteca:8082 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
@@ -371,17 +368,17 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:443)
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)
 
-2026-06-24T19:13:33.039-04:00  INFO 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
-2026-06-24T19:13:33.039-04:00  WARN 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2026-06-24T19:13:33.040-04:00  INFO 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
-2026-06-24T19:13:33.044-04:00  INFO 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-06-24T19:13:33.050-04:00  INFO 7264 --- [ms-juego] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-06-24T19:13:33.060-04:00  INFO 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782342813056 with initial instances count: 0
-2026-06-24T19:13:33.064-04:00  INFO 7264 --- [ms-juego] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-JUEGO with eureka with status UP
-2026-06-24T19:13:33.067-04:00  INFO 7264 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782342813066, current=UP, previous=STARTING]
-2026-06-24T19:13:33.069-04:00  INFO 7264 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086: registering service...
-2026-06-24T19:13:33.085-04:00  INFO 7264 --- [ms-juego] [main] com.example.ms_juego.JuegoServiceTest    : Started JuegoServiceTest in 17.267 seconds (process running for 18.454)
-2026-06-24T19:13:33.165-04:00  INFO 7264 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/MS-JUEGO": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-JUEGO": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2026-06-24T19:10:30.199-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+2026-06-24T19:10:30.199-04:00  WARN 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2026-06-24T19:10:30.200-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+2026-06-24T19:10:30.206-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-24T19:10:30.211-04:00  INFO 17608 --- [ms-biblioteca] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-24T19:10:30.227-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782342630220 with initial instances count: 0
+2026-06-24T19:10:30.233-04:00  INFO 17608 --- [ms-biblioteca] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-BIBLIOTECA with eureka with status UP
+2026-06-24T19:10:30.236-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782342630236, current=UP, previous=STARTING]
+2026-06-24T19:10:30.239-04:00  INFO 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-BIBLIOTECA/localhost:ms-biblioteca:8082: registering service...
+2026-06-24T19:10:30.321-04:00  INFO 17608 --- [ms-biblioteca] [main] c.e.ms_biblioteca.BibliotecaServiceTest  : Started BibliotecaServiceTest in 30.069 seconds (process running for 32.237)
+2026-06-24T19:10:30.440-04:00  INFO 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/MS-BIBLIOTECA": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-BIBLIOTECA": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
@@ -447,8 +444,8 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
 	... 22 more
 
-2026-06-24T19:13:33.165-04:00  WARN 7264 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-JUEGO": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2026-06-24T19:13:33.167-04:00  WARN 7264 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086 - registration failed Cannot execute request on any known server
+2026-06-24T19:10:30.442-04:00  WARN 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-BIBLIOTECA": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2026-06-24T19:10:30.442-04:00  WARN 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-BIBLIOTECA/localhost:ms-biblioteca:8082 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
@@ -466,7 +463,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
 	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
 
-2026-06-24T19:13:33.170-04:00  WARN 7264 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2026-06-24T19:10:30.453-04:00  WARN 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
@@ -484,263 +481,47 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
 	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
 
-2026-06-24T19:13:34.259-04:00  INFO 7264 --- [ms-juego] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MS-JUEGO with eureka with status DOWN
-2026-06-24T19:13:34.259-04:00  INFO 7264 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782342814259, current=DOWN, previous=UP]
-2026-06-24T19:13:34.259-04:00  INFO 7264 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086: registering service...
-2026-06-24T19:13:34.267-04:00  INFO 7264 --- [ms-juego] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-24T19:13:34.270-04:00 DEBUG 7264 --- [ms-juego] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
-    drop table if exists juego
-2026-06-24T19:13:34.274-04:00  INFO 7264 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
-	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
-	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.acquireEndpoint(InternalExecRuntime.java:103)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:125)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-
-2026-06-24T19:13:34.275-04:00  WARN 7264 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: Connection pool shut down
-2026-06-24T19:13:34.275-04:00  WARN 7264 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086 - registration failed Cannot execute request on any known server
-
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-2.0.2.jar:2.0.2]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
-	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
-
-2026-06-24T19:13:34.276-04:00  WARN 7264 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
-
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-2.0.2.jar:2.0.2]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
-	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
-
-2026-06-24T19:13:34.291-04:00  INFO 7264 --- [ms-juego] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-06-24T19:13:34.322-04:00  INFO 7264 --- [ms-juego] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-06-24T19:13:34.323-04:00  INFO 7264 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2026-06-24T19:13:37.336-04:00  INFO 7264 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2026-06-24T19:13:37.356-04:00  INFO 7264 --- [ms-juego] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
-	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
-	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.acquireEndpoint(InternalExecRuntime.java:103)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:125)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
-	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
-	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195)
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1186)
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1147)
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1093)
-	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
-	at java.base/java.lang.Iterable.forEach(Unknown Source)
-	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
-	at java.base/java.lang.Thread.run(Unknown Source)
-
-2026-06-24T19:13:37.358-04:00  WARN 7264 --- [ms-juego] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: Connection pool shut down
-2026-06-24T19:13:37.359-04:00 ERROR 7264 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086 - de-registration failedCannot execute request on any known server
-
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892) ~[eureka-client-2.0.2.jar:2.0.2]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.1.6.jar:6.1.6]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415) ~[spring-beans-6.1.6.jar:6.1.6]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239) ~[spring-beans-6.1.6.jar:6.1.6]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202) ~[spring-beans-6.1.6.jar:6.1.6]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195) ~[spring-beans-6.1.6.jar:6.1.6]
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.1.2.jar:4.1.2]
-	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.1.2.jar:4.1.2]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211) ~[spring-beans-6.1.6.jar:6.1.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-6.1.6.jar:6.1.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-6.1.6.jar:6.1.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202) ~[spring-beans-6.1.6.jar:6.1.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-6.1.6.jar:6.1.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195) ~[spring-beans-6.1.6.jar:6.1.6]
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1186) ~[spring-context-6.1.6.jar:6.1.6]
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1147) ~[spring-context-6.1.6.jar:6.1.6]
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1093) ~[spring-context-6.1.6.jar:6.1.6]
-	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145) ~[spring-boot-3.2.5.jar:3.2.5]
-	at java.base/java.lang.Iterable.forEach(Unknown Source) ~[na:na]
-	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-3.2.5.jar:3.2.5]
-	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
-
-2026-06-24T19:13:37.378-04:00  INFO 7264 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2026-06-24T19:16:52.208-04:00  INFO 19016 --- [ms-juego] [main] com.example.ms_juego.JuegoServiceTest    : Starting JuegoServiceTest using Java 21.0.10 with PID 19016 (started by sofia in C:\Users\sofia\Downloads\ProyectoFullstackEpico\MicroServicios-main\ms-juego)
-2026-06-24T19:16:52.209-04:00  INFO 19016 --- [ms-juego] [main] com.example.ms_juego.JuegoServiceTest    : The following 1 profile is active: "test"
-2026-06-24T19:16:53.333-04:00  INFO 19016 --- [ms-juego] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-24T19:16:53.499-04:00  INFO 19016 --- [ms-juego] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 154 ms. Found 1 JPA repository interface.
-2026-06-24T19:16:53.857-04:00  INFO 19016 --- [ms-juego] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=79b4ed36-0d56-3dc9-bfe6-d1a757d1efe3
-2026-06-24T19:16:55.458-04:00  WARN 19016 --- [ms-juego] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-06-24T19:16:55.463-04:00  WARN 19016 --- [ms-juego] [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-06-24T19:16:55.710-04:00  INFO 19016 --- [ms-juego] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-24T19:16:56.326-04:00  INFO 19016 --- [ms-juego] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@983050b
-2026-06-24T19:16:56.332-04:00  INFO 19016 --- [ms-juego] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-24T19:16:56.507-04:00  INFO 19016 --- [ms-juego] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
-2026-06-24T19:16:56.508-04:00  INFO 19016 --- [ms-juego] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
-2026-06-24T19:16:56.508-04:00  INFO 19016 --- [ms-juego] [main] o.f.c.internal.license.VersionPrinter    : 
-2026-06-24T19:16:56.559-04:00  INFO 19016 --- [ms-juego] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_juego-test (MySQL 8.0)
-2026-06-24T19:16:56.667-04:00  INFO 19016 --- [ms-juego] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.048s)
-2026-06-24T19:16:56.691-04:00  INFO 19016 --- [ms-juego] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_juego-test`: 1
-2026-06-24T19:16:56.700-04:00  INFO 19016 --- [ms-juego] [main] o.f.core.internal.command.DbMigrate      : Schema `db_juego-test` is up to date. No migration necessary.
-2026-06-24T19:16:56.831-04:00  INFO 19016 --- [ms-juego] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-24T19:16:56.931-04:00  INFO 19016 --- [ms-juego] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-06-24T19:16:56.987-04:00  INFO 19016 --- [ms-juego] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-24T19:16:57.178-04:00  INFO 19016 --- [ms-juego] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-24T19:16:57.298-04:00  WARN 19016 --- [ms-juego] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-06-24T19:16:58.334-04:00  INFO 19016 --- [ms-juego] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-24T19:16:58.360-04:00 DEBUG 19016 --- [ms-juego] [main] org.hibernate.SQL                        : 
-    drop table if exists juego
-2026-06-24T19:16:58.434-04:00 DEBUG 19016 --- [ms-juego] [main] org.hibernate.SQL                        : 
-    create table juego (
-        disponible bit not null,
-        id bigint not null auto_increment,
-        id_catalogo bigint,
-        id_descuento bigint,
-        id_mod bigint,
-        categoria varchar(255),
-        desarrolladora varchar(255),
-        descripcion varchar(255),
-        fecha_lanzamiento varchar(255),
-        nombre varchar(255),
-        primary key (id)
-    ) engine=InnoDB
-2026-06-24T19:16:58.485-04:00  INFO 19016 --- [ms-juego] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-24T19:16:58.866-04:00  WARN 19016 --- [ms-juego] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-24T19:17:00.807-04:00  INFO 19016 --- [ms-juego] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-06-24T19:17:01.861-04:00  INFO 19016 --- [ms-juego] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-06-24T19:17:01.892-04:00  INFO 19016 --- [ms-juego] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-06-24T19:17:01.957-04:00  WARN 19016 --- [ms-juego] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-06-24T19:17:02.016-04:00  INFO 19016 --- [ms-juego] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-06-24T19:17:02.150-04:00  INFO 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-06-24T19:17:02.158-04:00  INFO 19016 --- [ms-juego] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-06-24T19:17:02.186-04:00  INFO 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-06-24T19:17:02.186-04:00  INFO 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-06-24T19:17:02.186-04:00  INFO 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-06-24T19:17:02.186-04:00  INFO 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-06-24T19:17:02.186-04:00  INFO 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-06-24T19:17:02.186-04:00  INFO 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-06-24T19:17:02.186-04:00  INFO 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-06-24T19:17:02.516-04:00  INFO 19016 --- [ms-juego] [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2026-06-24T19:10:30.735-04:00  INFO 17608 --- [ms-biblioteca] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.ms_biblioteca.MsBibliotecaApplicationTests]: MsBibliotecaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-24T19:10:30.738-04:00  INFO 17608 --- [ms-biblioteca] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.ms_biblioteca.MsBibliotecaApplication for test class com.example.ms_biblioteca.MsBibliotecaApplicationTests
+2026-06-24T19:10:32.702-04:00  INFO 17608 --- [ms-biblioteca] [main] c.e.m.MsBibliotecaApplicationTests       : Starting MsBibliotecaApplicationTests using Java 21.0.10 with PID 17608 (started by sofia in C:\Users\sofia\Downloads\ProyectoFullstackEpico\MicroServicios-main\ms-biblioteca)
+2026-06-24T19:10:32.703-04:00  INFO 17608 --- [ms-biblioteca] [main] c.e.m.MsBibliotecaApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2026-06-24T19:10:33.267-04:00  INFO 17608 --- [ms-biblioteca] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-24T19:10:33.286-04:00  INFO 17608 --- [ms-biblioteca] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interface.
+2026-06-24T19:10:33.423-04:00  INFO 17608 --- [ms-biblioteca] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=58ca6a7d-62d2-3ad9-baa2-cd56f35ab50b
+2026-06-24T19:10:33.477-04:00  WARN 17608 --- [ms-biblioteca] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-06-24T19:10:33.479-04:00  WARN 17608 --- [ms-biblioteca] [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-06-24T19:10:33.528-04:00  INFO 17608 --- [ms-biblioteca] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-06-24T19:10:33.591-04:00  INFO 17608 --- [ms-biblioteca] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7118a1b9
+2026-06-24T19:10:33.591-04:00  INFO 17608 --- [ms-biblioteca] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-06-24T19:10:33.616-04:00  INFO 17608 --- [ms-biblioteca] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_biblioteca (MySQL 8.0)
+2026-06-24T19:10:33.633-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `db_biblioteca`.`flyway_schema_history` does not exist yet
+2026-06-24T19:10:33.634-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.009s)
+2026-06-24T19:10:33.658-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `db_biblioteca`.`flyway_schema_history` ...
+2026-06-24T19:10:33.826-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_biblioteca`: << Empty Schema >>
+2026-06-24T19:10:33.841-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `db_biblioteca` to version "1 - biblioteca"
+2026-06-24T19:10:33.902-04:00  INFO 17608 --- [ms-biblioteca] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema `db_biblioteca`, now at version v1 (execution time 00:00.028s)
+2026-06-24T19:10:33.940-04:00  INFO 17608 --- [ms-biblioteca] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-24T19:10:33.950-04:00  INFO 17608 --- [ms-biblioteca] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-24T19:10:33.968-04:00  INFO 17608 --- [ms-biblioteca] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-24T19:10:34.083-04:00  INFO 17608 --- [ms-biblioteca] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-24T19:10:34.115-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : create table biblioteca (id bigint not null auto_increment, horas_jugadas integer not null, instalado bit not null, juego_id bigint, primary key (id)) engine=InnoDB
+2026-06-24T19:10:34.142-04:00  INFO 17608 --- [ms-biblioteca] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24T19:10:35.319-04:00  WARN 17608 --- [ms-biblioteca] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-24T19:10:36.407-04:00  INFO 17608 --- [ms-biblioteca] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-24T19:10:37.753-04:00  INFO 17608 --- [ms-biblioteca] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-24T19:10:37.774-04:00  INFO 17608 --- [ms-biblioteca] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-06-24T19:10:37.789-04:00  WARN 17608 --- [ms-biblioteca] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-24T19:10:37.809-04:00  INFO 17608 --- [ms-biblioteca] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-24T19:10:37.813-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-24T19:10:37.815-04:00  INFO 17608 --- [ms-biblioteca] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-24T19:10:37.824-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-24T19:10:37.825-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-24T19:10:37.825-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-24T19:10:37.825-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-24T19:10:37.825-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-24T19:10:37.825-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-24T19:10:37.825-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-24T19:10:37.877-04:00  INFO 17608 --- [ms-biblioteca] [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
@@ -924,8 +705,8 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
 	... 140 more
 
-2026-06-24T19:17:02.517-04:00  WARN 19016 --- [ms-juego] [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2026-06-24T19:17:02.518-04:00  INFO 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2026-06-24T19:10:37.878-04:00  WARN 17608 --- [ms-biblioteca] [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2026-06-24T19:10:37.879-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-BIBLIOTECA/localhost:ms-biblioteca:8082 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
@@ -1058,17 +839,17 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:443)
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)
 
-2026-06-24T19:17:02.519-04:00  INFO 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
-2026-06-24T19:17:02.519-04:00  WARN 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2026-06-24T19:17:02.519-04:00  INFO 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
-2026-06-24T19:17:02.523-04:00  INFO 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-06-24T19:17:02.527-04:00  INFO 19016 --- [ms-juego] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-06-24T19:17:02.535-04:00  INFO 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782343022534 with initial instances count: 0
-2026-06-24T19:17:02.538-04:00  INFO 19016 --- [ms-juego] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-JUEGO with eureka with status UP
-2026-06-24T19:17:02.540-04:00  INFO 19016 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782343022539, current=UP, previous=STARTING]
-2026-06-24T19:17:02.543-04:00  INFO 19016 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086: registering service...
-2026-06-24T19:17:02.559-04:00  INFO 19016 --- [ms-juego] [main] com.example.ms_juego.JuegoServiceTest    : Started JuegoServiceTest in 11.853 seconds (process running for 13.569)
-2026-06-24T19:17:02.608-04:00  INFO 19016 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/MS-JUEGO": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-JUEGO": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2026-06-24T19:10:37.879-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+2026-06-24T19:10:37.879-04:00  WARN 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2026-06-24T19:10:37.879-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+2026-06-24T19:10:37.881-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-24T19:10:37.883-04:00  INFO 17608 --- [ms-biblioteca] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-24T19:10:37.884-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782342637884 with initial instances count: 0
+2026-06-24T19:10:37.889-04:00  INFO 17608 --- [ms-biblioteca] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-BIBLIOTECA with eureka with status UP
+2026-06-24T19:10:37.891-04:00  INFO 17608 --- [ms-biblioteca] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782342637891, current=UP, previous=STARTING]
+2026-06-24T19:10:37.891-04:00  INFO 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-BIBLIOTECA/localhost:ms-biblioteca:8082: registering service...
+2026-06-24T19:10:37.898-04:00  INFO 17608 --- [ms-biblioteca] [main] c.e.m.MsBibliotecaApplicationTests       : Started MsBibliotecaApplicationTests in 7.152 seconds (process running for 39.815)
+2026-06-24T19:10:37.912-04:00  INFO 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/MS-BIBLIOTECA": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-BIBLIOTECA": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
@@ -1134,8 +915,8 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
 	... 22 more
 
-2026-06-24T19:17:02.609-04:00  WARN 19016 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-JUEGO": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2026-06-24T19:17:02.609-04:00  WARN 19016 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086 - registration failed Cannot execute request on any known server
+2026-06-24T19:10:37.913-04:00  WARN 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-BIBLIOTECA": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2026-06-24T19:10:37.913-04:00  WARN 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-BIBLIOTECA/localhost:ms-biblioteca:8082 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
@@ -1153,7 +934,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
 	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
 
-2026-06-24T19:17:02.614-04:00  WARN 19016 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2026-06-24T19:10:37.914-04:00  WARN 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
@@ -1171,13 +952,30 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
 	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
 
-2026-06-24T19:17:03.105-04:00  INFO 19016 --- [ms-juego] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MS-JUEGO with eureka with status DOWN
-2026-06-24T19:17:03.106-04:00  INFO 19016 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782343023106, current=DOWN, previous=UP]
-2026-06-24T19:17:03.106-04:00  INFO 19016 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086: registering service...
-2026-06-24T19:17:03.114-04:00  INFO 19016 --- [ms-juego] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-24T19:17:03.115-04:00 DEBUG 19016 --- [ms-juego] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
-    drop table if exists juego
-2026-06-24T19:17:03.119-04:00  INFO 19016 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
+2026-06-24T19:10:38.226-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : select count(*) from biblioteca b1_0
+2026-06-24T19:10:38.253-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.269-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.274-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.279-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.284-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.291-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.298-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.304-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.309-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.314-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.318-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.321-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.325-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.328-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.331-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : insert into biblioteca (horas_jugadas,instalado,juego_id) values (?,?,?)
+2026-06-24T19:10:38.350-04:00 DEBUG 17608 --- [ms-biblioteca] [main] org.hibernate.SQL                        : select b1_0.id,b1_0.horas_jugadas,b1_0.instalado,b1_0.juego_id from biblioteca b1_0
+2026-06-24T19:10:38.375-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MS-BIBLIOTECA with eureka with status DOWN
+2026-06-24T19:10:38.377-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782342638377, current=DOWN, previous=UP]
+2026-06-24T19:10:38.378-04:00  INFO 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-BIBLIOTECA/localhost:ms-biblioteca:8082: registering service...
+2026-06-24T19:10:38.384-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24T19:10:38.387-04:00 DEBUG 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists biblioteca
+2026-06-24T19:10:38.391-04:00  INFO 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
 	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
 	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
 	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
@@ -1229,8 +1027,8 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.base/java.lang.Thread.run(Unknown Source)
 
-2026-06-24T19:17:03.119-04:00  WARN 19016 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: Connection pool shut down
-2026-06-24T19:17:03.119-04:00  WARN 19016 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086 - registration failed Cannot execute request on any known server
+2026-06-24T19:10:38.391-04:00  WARN 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: Connection pool shut down
+2026-06-24T19:10:38.391-04:00  WARN 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-BIBLIOTECA/localhost:ms-biblioteca:8082 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
@@ -1248,7 +1046,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
 	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
 
-2026-06-24T19:17:03.120-04:00  WARN 19016 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2026-06-24T19:10:38.392-04:00  WARN 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
@@ -1266,11 +1064,11 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
 	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
 
-2026-06-24T19:17:03.151-04:00  INFO 19016 --- [ms-juego] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-06-24T19:17:03.161-04:00  INFO 19016 --- [ms-juego] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-06-24T19:17:03.162-04:00  INFO 19016 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2026-06-24T19:17:06.169-04:00  INFO 19016 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2026-06-24T19:17:06.176-04:00  INFO 19016 --- [ms-juego] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
+2026-06-24T19:10:38.412-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-24T19:10:38.423-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-24T19:10:38.423-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-06-24T19:10:41.437-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-06-24T19:10:41.443-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
 	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
 	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
 	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
@@ -1337,8 +1135,8 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
 	at java.base/java.lang.Thread.run(Unknown Source)
 
-2026-06-24T19:17:06.176-04:00  WARN 19016 --- [ms-juego] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: Connection pool shut down
-2026-06-24T19:17:06.176-04:00 ERROR 19016 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086 - de-registration failedCannot execute request on any known server
+2026-06-24T19:10:41.443-04:00  WARN 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: Connection pool shut down
+2026-06-24T19:10:41.443-04:00 ERROR 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-BIBLIOTECA/localhost:ms-biblioteca:8082 - de-registration failedCannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
@@ -1371,500 +1169,13 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-3.2.5.jar:3.2.5]
 	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
 
-2026-06-24T19:17:06.183-04:00  INFO 19016 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2026-06-24T19:22:01.206-04:00  INFO 14468 --- [ms-juego] [main] com.example.ms_juego.JuegoServiceTest    : Starting JuegoServiceTest using Java 21.0.10 with PID 14468 (started by sofia in C:\Users\sofia\Downloads\ProyectoFullstackEpico\MicroServicios-main\ms-juego)
-2026-06-24T19:22:01.208-04:00  INFO 14468 --- [ms-juego] [main] com.example.ms_juego.JuegoServiceTest    : The following 1 profile is active: "test"
-2026-06-24T19:22:02.441-04:00  INFO 14468 --- [ms-juego] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-24T19:22:02.617-04:00  INFO 14468 --- [ms-juego] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 164 ms. Found 1 JPA repository interface.
-2026-06-24T19:22:02.992-04:00  INFO 14468 --- [ms-juego] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=79b4ed36-0d56-3dc9-bfe6-d1a757d1efe3
-2026-06-24T19:22:04.507-04:00  WARN 14468 --- [ms-juego] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2026-06-24T19:22:04.511-04:00  WARN 14468 --- [ms-juego] [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2026-06-24T19:22:04.723-04:00  INFO 14468 --- [ms-juego] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-24T19:22:05.322-04:00  INFO 14468 --- [ms-juego] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d551ec6
-2026-06-24T19:22:05.326-04:00  INFO 14468 --- [ms-juego] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-24T19:22:05.463-04:00  INFO 14468 --- [ms-juego] [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
-2026-06-24T19:22:05.464-04:00  INFO 14468 --- [ms-juego] [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
-2026-06-24T19:22:05.464-04:00  INFO 14468 --- [ms-juego] [main] o.f.c.internal.license.VersionPrinter    : 
-2026-06-24T19:22:05.518-04:00  INFO 14468 --- [ms-juego] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_juego-test (MySQL 8.0)
-2026-06-24T19:22:05.669-04:00  INFO 14468 --- [ms-juego] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.061s)
-2026-06-24T19:22:05.732-04:00  INFO 14468 --- [ms-juego] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_juego-test`: 1
-2026-06-24T19:22:05.746-04:00  INFO 14468 --- [ms-juego] [main] o.f.core.internal.command.DbMigrate      : Schema `db_juego-test` is up to date. No migration necessary.
-2026-06-24T19:22:05.956-04:00  INFO 14468 --- [ms-juego] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-24T19:22:06.092-04:00  INFO 14468 --- [ms-juego] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-06-24T19:22:06.141-04:00  INFO 14468 --- [ms-juego] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-24T19:22:06.310-04:00  INFO 14468 --- [ms-juego] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-24T19:22:06.411-04:00  WARN 14468 --- [ms-juego] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-06-24T19:22:07.419-04:00  INFO 14468 --- [ms-juego] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-24T19:22:07.437-04:00 DEBUG 14468 --- [ms-juego] [main] org.hibernate.SQL                        : 
-    drop table if exists juego
-2026-06-24T19:22:07.466-04:00 DEBUG 14468 --- [ms-juego] [main] org.hibernate.SQL                        : 
-    create table juego (
-        disponible bit not null,
-        id bigint not null auto_increment,
-        id_catalogo bigint,
-        id_descuento bigint,
-        id_mod bigint,
-        categoria varchar(255),
-        desarrolladora varchar(255),
-        descripcion varchar(255),
-        fecha_lanzamiento varchar(255),
-        nombre varchar(255),
-        primary key (id)
-    ) engine=InnoDB
-2026-06-24T19:22:07.512-04:00  INFO 14468 --- [ms-juego] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-24T19:22:07.859-04:00  WARN 14468 --- [ms-juego] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-24T19:22:09.759-04:00  INFO 14468 --- [ms-juego] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-06-24T19:22:10.798-04:00  INFO 14468 --- [ms-juego] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-06-24T19:22:10.829-04:00  INFO 14468 --- [ms-juego] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-06-24T19:22:10.904-04:00  WARN 14468 --- [ms-juego] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-06-24T19:22:10.965-04:00  INFO 14468 --- [ms-juego] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-06-24T19:22:11.109-04:00  INFO 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-06-24T19:22:11.116-04:00  INFO 14468 --- [ms-juego] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-06-24T19:22:11.140-04:00  INFO 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-06-24T19:22:11.140-04:00  INFO 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-06-24T19:22:11.140-04:00  INFO 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-06-24T19:22:11.140-04:00  INFO 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-06-24T19:22:11.140-04:00  INFO 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-06-24T19:22:11.140-04:00  INFO 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-06-24T19:22:11.140-04:00  INFO 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-06-24T19:22:11.438-04:00  INFO 14468 --- [ms-juego] [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplications(RestTemplateEurekaHttpClient.java:135)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1045)
-	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:958)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:396)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:247)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:242)
-	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68)
-	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:321)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:365)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:375)
-	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:179)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:362)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
-	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:482)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89)
-	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288)
-	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:471)
-	at java.base/java.lang.Iterable.forEach(Unknown Source)
-	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:260)
-	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:981)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(Unknown Source)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Unknown Source)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Unknown Source)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(Unknown Source)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
-	at java.base/java.util.Optional.orElseGet(Unknown Source)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
-	at java.base/java.util.ArrayList.forEach(Unknown Source)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(Unknown Source)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:94)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:52)
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:70)
-	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:100)
-	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:520)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:748)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:443)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
-	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.base/java.net.Socket.connect(Unknown Source)
-	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
-	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
-	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
-	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:184)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
-	... 140 more
-
-2026-06-24T19:22:11.439-04:00  WARN 14468 --- [ms-juego] [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2026-06-24T19:22:11.439-04:00  INFO 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1045)
-	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:958)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:396)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:247)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:242)
-	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68)
-	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:321)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:365)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:375)
-	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:179)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:362)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
-	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:482)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89)
-	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:288)
-	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:471)
-	at java.base/java.lang.Iterable.forEach(Unknown Source)
-	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:260)
-	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:981)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(Unknown Source)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Unknown Source)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Unknown Source)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(Unknown Source)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
-	at java.base/java.util.Optional.orElseGet(Unknown Source)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
-	at java.base/java.util.ArrayList.forEach(Unknown Source)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(Unknown Source)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:94)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:52)
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:70)
-	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:100)
-	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:520)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:748)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:443)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)
-
-2026-06-24T19:22:11.440-04:00  INFO 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
-2026-06-24T19:22:11.440-04:00  WARN 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2026-06-24T19:22:11.440-04:00  INFO 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
-2026-06-24T19:22:11.442-04:00  INFO 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-06-24T19:22:11.445-04:00  INFO 14468 --- [ms-juego] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-06-24T19:22:11.452-04:00  INFO 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782343331450 with initial instances count: 0
-2026-06-24T19:22:11.456-04:00  INFO 14468 --- [ms-juego] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-JUEGO with eureka with status UP
-2026-06-24T19:22:11.457-04:00  INFO 14468 --- [ms-juego] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782343331457, current=UP, previous=STARTING]
-2026-06-24T19:22:11.459-04:00  INFO 14468 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086: registering service...
-2026-06-24T19:22:11.470-04:00  INFO 14468 --- [ms-juego] [main] com.example.ms_juego.JuegoServiceTest    : Started JuegoServiceTest in 11.702 seconds (process running for 13.204)
-2026-06-24T19:22:11.527-04:00  INFO 14468 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/MS-JUEGO": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-JUEGO": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
-	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.base/java.net.Socket.connect(Unknown Source)
-	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
-	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
-	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
-	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:184)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
-	... 22 more
-
-2026-06-24T19:22:11.527-04:00  WARN 14468 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/MS-JUEGO": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2026-06-24T19:22:11.528-04:00  WARN 14468 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086 - registration failed Cannot execute request on any known server
-
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-2.0.2.jar:2.0.2]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
-	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
-
-2026-06-24T19:22:11.532-04:00  WARN 14468 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
-
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-2.0.2.jar:2.0.2]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-2.0.2.jar:2.0.2]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
-	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
-
-2026-06-24T19:22:12.106-04:00  INFO 14468 --- [ms-juego] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MS-JUEGO with eureka with status DOWN
-2026-06-24T19:22:12.106-04:00  INFO 14468 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782343332106, current=DOWN, previous=UP]
-2026-06-24T19:22:12.106-04:00  INFO 14468 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086: registering service...
-2026-06-24T19:22:12.120-04:00  INFO 14468 --- [ms-juego] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-24T19:22:12.123-04:00 DEBUG 14468 --- [ms-juego] [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
-    drop table if exists juego
-2026-06-24T19:22:12.126-04:00  INFO 14468 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
+2026-06-24T19:10:41.449-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-06-24T19:10:41.452-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MS-BIBLIOTECA with eureka with status DOWN
+2026-06-24T19:10:41.452-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782342641452, current=DOWN, previous=UP]
+2026-06-24T19:10:41.452-04:00  INFO 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-BIBLIOTECA/localhost:ms-biblioteca:8082: registering service...
+2026-06-24T19:10:41.459-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24T19:10:41.460-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-06-24T19:10:41.472-04:00  INFO 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
 	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
 	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
 	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
@@ -1916,8 +1227,8 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.base/java.lang.Thread.run(Unknown Source)
 
-2026-06-24T19:22:12.126-04:00  WARN 14468 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: Connection pool shut down
-2026-06-24T19:22:12.126-04:00  WARN 14468 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086 - registration failed Cannot execute request on any known server
+2026-06-24T19:10:41.473-04:00  WARN 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: Connection pool shut down
+2026-06-24T19:10:41.473-04:00  WARN 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-BIBLIOTECA/localhost:ms-biblioteca:8082 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
@@ -1935,7 +1246,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
 	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
 
-2026-06-24T19:22:12.127-04:00  WARN 14468 --- [ms-juego] [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2026-06-24T19:10:41.473-04:00  WARN 17608 --- [ms-biblioteca] [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
@@ -1953,11 +1264,10 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
 	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
 
-2026-06-24T19:22:12.155-04:00  INFO 14468 --- [ms-juego] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-06-24T19:22:12.229-04:00  INFO 14468 --- [ms-juego] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-06-24T19:22:12.230-04:00  INFO 14468 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2026-06-24T19:22:15.242-04:00  INFO 14468 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2026-06-24T19:22:15.251-04:00  INFO 14468 --- [ms-juego] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
+2026-06-24T19:10:41.480-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-06-24T19:10:41.481-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-06-24T19:10:44.491-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-06-24T19:10:44.496-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
 	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
 	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
 	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
@@ -2024,8 +1334,8 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
 	at java.base/java.lang.Thread.run(Unknown Source)
 
-2026-06-24T19:22:15.253-04:00  WARN 14468 --- [ms-juego] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: Connection pool shut down
-2026-06-24T19:22:15.253-04:00 ERROR 14468 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-JUEGO/localhost:ms-juego:8086 - de-registration failedCannot execute request on any known server
+2026-06-24T19:10:44.496-04:00  WARN 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: Connection pool shut down
+2026-06-24T19:10:44.496-04:00 ERROR 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-BIBLIOTECA/localhost:ms-biblioteca:8082 - de-registration failedCannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
@@ -2058,4 +1368,4 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-3.2.5.jar:3.2.5]
 	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
 
-2026-06-24T19:22:15.264-04:00  INFO 14468 --- [ms-juego] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-06-24T19:10:44.501-04:00  INFO 17608 --- [ms-biblioteca] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
