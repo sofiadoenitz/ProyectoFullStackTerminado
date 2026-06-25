@@ -98,7 +98,6 @@ public class UsuarioServiceTest {
 
     Map<String, Object> resultado = usuarioService.obtenerDatosUsuario(id);
 
-    // 4. Aserciones
     assertNotNull(resultado);
     assertEquals(usuario, resultado.get("usuario"));
 }

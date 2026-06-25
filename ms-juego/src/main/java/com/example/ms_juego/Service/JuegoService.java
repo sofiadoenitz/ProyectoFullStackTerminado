@@ -58,21 +58,20 @@ public class JuegoService {
     }
 
     //Conexiones
-    public Map<String, Object> obtenerJuegoCompleto(Long id){
-        Juego juego = repo.findById(id).orElse(null);
-        Map<String, Object> respuesta = new HashMap<>();
-        if (juego != null){
-            CatalogoDTO catalogo = catalogoClient.obtenerCatalogo(id);
+    public Map<String, Object> obtenerJuegoCompleto(Long id) {
+    Juego juego = repo.findById(id).orElse(null);
+    Map<String, Object> respuesta = new HashMap<>();
 
-            DescuentoDTO descuento = descuentoClient.obtenerDescuento(id);
+    if (juego != null) {
+        CatalogoDTO catalogo = catalogoClient.obtenerCatalogo(juego.getIdCatalogo()); 
+        DescuentoDTO descuento = descuentoClient.obtenerDescuento(juego.getIdDescuento()); 
+        ModDTO mod = modClient.obtenerMod(juego.getIdMod());                
 
-            ModDTO mod = modClient.obtenerMod(id);
-
-            respuesta.put("juego", juego);
-            respuesta.put("catalogo", catalogo);
-            respuesta.put("descuento", descuento);
-            respuesta.put("mod", mod);
-        }
-        return respuesta;
+        respuesta.put("juego", juego);
+        respuesta.put("catalogo", catalogo);
+        respuesta.put("descuento", descuento);
+        respuesta.put("mod", mod);
     }
+    return respuesta;
+}
 }
